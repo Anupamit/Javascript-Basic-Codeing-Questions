@@ -564,7 +564,7 @@ foo();
 //[ 'name', 'salary', 'country' ] also we delete enumerable then show threeof these
 ```
 ## Q.47 Explain?
-```
+```js
 (function() {
 	var objA = {
 		foo: 'foo',
@@ -614,7 +614,7 @@ foo();
 //true,true
 ```
 ## Q.51 Explain?
-```
+```js
 (function() {
 	var objA = Object.create({
 		foo: 'foo'
@@ -693,7 +693,7 @@ foo();
 }());
 ```
 ## Q.57 Explain?
-```
+```js
 (function () {
   var array = new Array('a', 'b', 'c', 'd', 'e');
   array[10] = 'f';
@@ -704,7 +704,7 @@ foo();
 }());
 ```
 ## Q.58 Explain?
-```
+```js
 (function(){
 	var animal = ['cow','horse'];
 		animal.push('cat');
@@ -734,7 +734,7 @@ foo();
 })();
 ```
 ## Q.60 Explain?
-```
+```js
 (function(){
 	var array = [1,2,3,4,5,1,2,3,4,5,6];
 	console.log(array.indexOf(2));//1
@@ -743,7 +743,7 @@ foo();
 })();
 ```
 ## Q.61 Explain?
-```
+```js
 (function(){
 	var numbers = [2,3,4,8,9,11,13,12,16];
 	var even = numbers.filter(function(element, index){
@@ -773,7 +773,7 @@ foo();
 })();
 ```
 ## Q.63 Explain?
-```
+```js
 (function(){
 	var list = ['foo','bar','john','ritz'];
 	    console.log(list.slice(1));	//[ 'bar', 'john', 'ritz' ]
@@ -784,7 +784,7 @@ foo();
 })();
 ```
 ## Q.64 Explain?
-```
+```js
 (function(){
 	var list = ['foo','bar','john'];
 	    console.log(list.splice(1));//['bar','john']	
@@ -793,7 +793,7 @@ foo();
 })();
 ```
 ## Q.65 Explain?
-```
+```js
 (function(){
 	var arrayNumb = [2, 8, 15, 16, 23, 42];
 	arrayNumb.sort();
@@ -802,7 +802,7 @@ foo();
 ```
 **Function**
 ## Q.66 Explain?
-```
+```js
 function funcA(){
 	console.log("funcA ", this);
 	(function innerFuncA1(){
@@ -816,7 +816,7 @@ function funcA(){
 console.log(funcA());//funcA Window {...} innerFunc1 Window {...} innerFunA11 Window {...}
 ````
 ## Q.67 Explain?
-```
+```js
 var obj = {
 	message: "Hello",
 	innerMessage: !(function() {
@@ -827,7 +827,7 @@ var obj = {
 console.log(obj.innerMessage);//true
 ```
 ## Q.68 Explain?
-```
+```js
 var obj = {
 	message: "Hello",
 	innerMessage: function() {
@@ -838,7 +838,7 @@ var obj = {
 console.log(obj.innerMessage());//Hello
 ```
 ## Q.69 Explain?
-```
+```js
 var obj = {
   message: 'Hello',
   innerMessage: function () {
@@ -850,7 +850,7 @@ var obj = {
 console.log(obj.innerMessage());//undefine
 ```
 ## Q.70 Explain?
-```
+```js
 var obj = {
   message: 'Hello',
   innerMessage: function () {
@@ -863,7 +863,7 @@ var obj = {
 console.log(obj.innerMessage());//undefine
 ```
 ## Q.71 Explain?
-```
+```js
 function myFunc(){
 	console.log(this.message);//undefine
 }
@@ -872,7 +872,7 @@ myFunc.message = "Hi John";
 console.log(myFunc());//undefine
 ```
 ## Q.72 Explain?
-```
+```js
 function myFunc(){
 	console.log(myFunc.message); //Hi john
 }
@@ -881,7 +881,7 @@ myFunc.message = "Hi John";
 console.log(myFunc()); //undefine
 ```
 ## Q.73 Explain?
-```
+```js
 function myFunc() {
   myFunc.message = 'Hi John';
   console.log(myFunc.message);//Hi John
@@ -889,7 +889,7 @@ function myFunc() {
 console.log(myFunc());//Undefine
 ```
 ## Q.74 Explain?
-```
+```js
 function myFunc(param1,param2) {
   console.log(myFunc.length);
 }
@@ -905,7 +905,7 @@ console.log(myFunc("a","b","c","d"));
 ```
 **Object Oriented**
 ## Q.75 Explain?
-```
+```js
 function Person(name, age){
 	this.name = name || "John";
 	this.age = age || 24;
@@ -925,7 +925,7 @@ var person1 = new Person('John');
 ```
 **Scopes**
 ## Q.76 Explain?
-```
+```js
 function passWordMngr() {
 	var password = '12345678';
 	this.userName = 'John';
@@ -939,7 +939,7 @@ console.log(userInfo.pwd);//12345678
 console.log(userInfo.userName);//undeifne
 ```
 ## Q.77 Explain?
-```
+```js
 var employeeId = 'aq123';
 function Employee() {
   this.employeeId = 'bq1uy';
@@ -947,7 +947,7 @@ function Employee() {
 console.log(Employee.employeeId);//undefine
 ```
 ## Q.78 Explain?
-```
+```js
 var employeeId = 'aq123';
 function Employee() {
 	this.employeeId = 'bq1uy';
@@ -960,7 +960,7 @@ console.log(new Employee().employeeId);//bq1uy
 ```
 **Call, Apply, Bind**
 ## Q.79 Explain?
-```
+```js
 (function() {
 	var greet = 'Hello World';
 	var toGreet = [].filter.call(greet, function(element, index) {
@@ -970,7 +970,7 @@ console.log(new Employee().employeeId);//bq1uy
 }());
 ```
 ## Q.80 Explain?
-```
+```js
 (function greetNewCustomer() {
 	console.log('Hello ' + this.name);//Hello John
 }.bind({
@@ -979,7 +979,7 @@ console.log(new Employee().employeeId);//bq1uy
 ```
 **Return Statement**
 ## Q.81 Explain?
-```
+```js
 (function(){
 	function sayHello(){
 		var name = "Hi John";
@@ -993,7 +993,7 @@ console.log(new Employee().employeeId);//bq1uy
 //Uncaught TypeError: Cannot read property 'fullName' of undefined
 ```
 ## Q.82 Explain?
-```
+```js
 function getNumber(){
 	return (2,4,5);
 }
@@ -1002,7 +1002,7 @@ var numb = getNumber();
 console.log(numb); //5
 ```
 ## Q.83 Explain?
-```
+```js
 function getNumber(){
 	return;
 }
@@ -1011,7 +1011,7 @@ var numb = getNumber();
 console.log(numb);//undefine
 ```
 ## Q.84 Explain?
-```
+```js
 function mul(x){
 	return function(y){
 		return [x*y, function(z){
@@ -1024,7 +1024,7 @@ console.log(mul(2)(3)[0]);//6
 console.log(mul(2)(3)[1](4));//10
 ```
 ## Q.85 Explain?
-```
+```js
 function mul(x) {
 	return function(y) {
 		return {
@@ -1039,7 +1039,7 @@ console.log(mul(2)(3).result);//6
 console.log(mul(2)(3).sum(4));//10
 ```
 ## Q.86 Explain?
-```
+```js
 function mul(x) {
 	return function(y) {
 		return function(z) {
@@ -1054,7 +1054,7 @@ function mul(x) {
 console.log(mul(2)(3)(4)(5)(6));//720
 ```
 ## Q.87 Explain?
-```
+```js
 function getName1(){
 	console.log(this.name);//tony
 }
@@ -1072,11 +1072,11 @@ personObj.print();
 personObj.getName2();
 ```
 ## Q.88 Explain?
-```
+```js
 console.log("I want pizza"[0]);//I
 ```
 ## Q.89 Explain?
-```
+```js
 function sum(num1, num2 = num1) {
   console.log(num1 + num2);//20
 }
@@ -1102,7 +1102,7 @@ console.log(giveLydiaPizza.prototype); //{}
 console.log(giveLydiaChocolate.prototype);//undefine
 ```
 ## Q.92 Explain?
-```
+```js
 const person = {
   name: "Lydia",
   age: 21,
@@ -1113,7 +1113,7 @@ for (const [x, y] of Object.entries(person)) {
 }
 ```
 ## Q.93 Explain?
-```
+```js
 function getItems(fruitList, favoriteFruit, ...args) {
   return [...fruitList, ...args, favoriteFruit];
 }
@@ -1122,7 +1122,7 @@ console.log(getItems(["banana", "apple"], "pear", "orange"));  //["banana", "app
 ```
 `...args` is a rest parameter. The rest parameter's value is an array containing all remaining arguments, and can only be the last parameter!
 ## Q.94 Explain?
-```
+```js
 function nums(a, b) {
   if (a > b) console.log("a is bigger");
   else console.log("b is bigger");
@@ -1134,7 +1134,7 @@ console.log(nums(4, 2));  //a is bigger,undefine
 console.log(nums(1, 2));  //b is bigger,undefine
 ```
 ## Q.95 Explain?
-```
+```js
 class Person {
   constructor() {
     this.name = "Lydia";
@@ -1151,11 +1151,7 @@ const member = new Person();
 console.log(member.name); //Sarah
 ```
 We can set classes equal to other classes/function constructors. In this case, we set Person equal to AnotherPerson. The name on this constructor is Sarah, so the name property on the new Person instance member is "Sarah".
-## Q.96 Explain?
-## Q.97 Explain?
-## Q.98 Explain?
-## Q.99 Explain?
-## Q.100 Explain?
+
 
 
 
